@@ -48,8 +48,6 @@ export const createGateway = () => {
     buildService({ url }) {
       return new AuthenticatedDataSource({ url });
     },
-    // Enable query planning debugging in development
-    debug: !env.isProduction,
   });
 };
 
