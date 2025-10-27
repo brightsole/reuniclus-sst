@@ -36,11 +36,11 @@ export const createGateway = () => {
       subgraphs: [
         {
           name: 'items',
-          url: env.services.items,
+          url: `${env.services.items}/graphql`,
         },
         {
           name: 'users',
-          url: env.services.users,
+          url: `${env.services.users}/graphql`,
         },
         // Add more microservices here as needed
       ],

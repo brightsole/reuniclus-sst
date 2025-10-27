@@ -9,11 +9,11 @@ const env = cleanEnv(process.env, {
   // Microservice URLs for federation
   ITEMS_SERVICE_URL: url({
     desc: 'Items microservice GraphQL endpoint URL',
-    default: 'http://localhost:4001/graphql',
+    default: 'http://localhost:4001',
   }),
   USERS_SERVICE_URL: url({
     desc: 'Users microservice GraphQL endpoint URL',
-    default: 'http://localhost:4002/graphql',
+    default: 'http://localhost:4002',
   }),
   // Internal service authentication
   INTERNAL_SECRET_HEADER_NAME: str({
