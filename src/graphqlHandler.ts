@@ -9,7 +9,6 @@ import setContext from './setContext';
 
 export const createGraphqlServer = async () => {
   const gateway = createGateway();
-  console.log('GraphQL Gateway created', gateway);
 
   return new ApolloServer({
     gateway,
