@@ -1,4 +1,4 @@
-import { AuthenticatedDataSource } from './gateway';
+import { AuthenticatedDataSource } from './authenticatedDataSource';
 import env from './env';
 
 // Simple integration test to verify the class can be instantiated
