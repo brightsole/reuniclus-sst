@@ -20,11 +20,15 @@ export default $config({
     });
 
     const functionConfig = {
-      runtime: 'nodejs22.x',
-      timeout: '30 seconds',
-      memory: '1024 MB',
+      runtime: 'nodejs22.x' as const,
+      timeout: '30 seconds' as const,
+      memory: '1024 MB' as const,
       nodejs: {
-        format: 'esm',
+        format: 'esm' as const,
+        install: ['graphql'],
+        esbuild: {
+          external: ['graphql'],
+        },
       },
       environment: {
         // starter: solosis-sst used as items
@@ -32,7 +36,7 @@ export default $config({
         // starter: duosion-sst used as users/auth
         USERS_SERVICE_URL: usersApiUrl.value,
       },
-    } as const;
+    };
 
     api.route('ANY /graphql', {
       ...functionConfig,
